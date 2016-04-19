@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby18 -wKU
+line = ENV['TM_CURRENT_LINE']
+# line = STDIN.read
+index = ENV['TM_LINE_INDEX'].to_i
+lineSplit = line.split("")
+line = ''
+#only read the line till the caret
+for i in 0..index - 1
+    line &lt;&lt; lineSplit[i]
+end
+tabSize = ENV["TM_TAB_SIZE"]
+# matching parts
+if /\/\//.match(line) != nil
+    print "\n// "
+elsif / *\* .*/.match(line) != nil
+    print "\n* "
+else
+    print "\n"
+    #TODO get indentation to work for non {} languages and multi-cursor     
+    if /\{$/.match(line) != nil
+        print "\t"
+    end
+end</string>
+	<key>input</key>
+	<string>line</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Complete Comment</string>
+	<key>outputCaret</key>
+	<string>heuristic</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>uuid</key>
+	<string>A40131AF-F376-4F5C-89FF-676C74C0B551</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

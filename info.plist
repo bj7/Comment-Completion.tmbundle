@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>wworeavgg@tznvy.pbz</string>
+	<key>contactName</key>
+	<string>Joshua Bernitt</string>
+	<key>description</key>
+	<string>Completes block comments, and header comments and inline comments. Automatically adds '*' and '//' on each return while in a comment.</string>
+	<key>name</key>
+	<string>Comment Completion</string>
+	<key>uuid</key>
+	<string>FFED4AF7-4F90-4B52-801A-D822B788BB32</string>
+</dict>
+</plist>
